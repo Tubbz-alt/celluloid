@@ -43,7 +43,7 @@ configure_file(
 
 appstream_util = find_program('appstream-util', required: false)
 if appstream_util.found()
-  test('Validate appstream file', appstream_util, args: ['validate', '--nonet', appdata])
+  test('Validate appstream file', appstream_util, args: ['validate-relax', '--nonet', appdata])
 endif
 
 desktop_file_validate = find_program('desktop-file-validate', required: false)
